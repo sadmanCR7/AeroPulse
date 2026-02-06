@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'aeropulse.wsgi.application'
 DATABASES = {
     'default': dj_database_url.config(
         # Fallback to your local MySQL database if DATABASE_URL is not set
-        defpip install psycopg2-binary whitenoisepip freeze > requirements.txtault=f"mysql://{os.getenv('DB_USER', 'aeropulse_user')}:{os.getenv('DB_PASSWORD', 'root')}@{os.getenv('DB_HOST', 'localhost')}:{os.getenv('DB_PORT', '3306')}/{os.getenv('DB_NAME', 'aeropulse_db')}"
+        default=f"mysql://{os.getenv('DB_USER', 'aeropulse_user')}:{os.getenv('DB_PASSWORD', 'root')}@{os.getenv('DB_HOST', 'localhost')}:{os.getenv('DB_PORT', '3306')}/{os.getenv('DB_NAME', 'aeropulse_db')}"
     )
 }
 
