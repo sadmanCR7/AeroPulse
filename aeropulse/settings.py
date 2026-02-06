@@ -26,7 +26,15 @@ SECRET_KEY = 'django-insecure-bz^^1g)la*c95c2sk9vy_$3v1k%f^6g_#30g^iqma-d5mj=1_f
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*.onrender.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = [
+    'aeropulse-auct.onrender.com',  # Your specific Render domain
+    '.onrender.com',                # Allow all Render subdomains (note the dot, no asterisk)
+    'localhost',
+    '127.0.0.1'
+]
+RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
+if RENDER_EXTERNAL_HOSTNAME:
+    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
 
 # Application definition
